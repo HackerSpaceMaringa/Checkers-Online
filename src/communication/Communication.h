@@ -3,7 +3,7 @@
 
 #include "defines.h"
 #include <boost/asio.hpp>
-//#include <boost/ref.hpp>
+#include <boost/ref.hpp>
 
 using boost::asio::ip::tcp;
 
