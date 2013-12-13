@@ -8,6 +8,7 @@ class Player2: public Game{
         void waitPlayer();
         void communicationType();
         void answerPlayer();
+        bool isWaiting(int);
 };
 
 #endif

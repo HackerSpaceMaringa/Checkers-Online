@@ -78,7 +78,7 @@ void Game::quitGame(){
 void Game::keyPressedDown(SDLKey key){
     switch(key){
         case SDLK_r:
-            resetGame();
+            //resetGame();
             break;
         case SDLK_e:
             if (!startGame())
@@ -93,6 +93,7 @@ void Game::keyPressedDown(SDLKey key){
 }
 
 void Game::mouseLeftPressedDown(int x, int y){
+    if (isWaiting(player)) return;
     int id = x / PIECE_SIZE;
     id += (y / PIECE_SIZE) * (int)sqrt(BOARD_SIZE);
 

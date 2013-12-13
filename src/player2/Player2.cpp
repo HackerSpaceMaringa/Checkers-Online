@@ -15,3 +15,8 @@ void Player2::waitPlayer(){
         gameControl->setValidPositions(oldId);
     }
 }
+
+bool Player2::isWaiting(int player){
+    if (player == WHITE) return true;
+    return false;
+}

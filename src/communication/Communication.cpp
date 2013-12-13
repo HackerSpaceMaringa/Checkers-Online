@@ -18,15 +18,20 @@ void Communication::sendMessage(tcp::socket *socket, int newId, int oldId){
 }
 
 void Communication::readMessage(tcp::socket *socket, int *newId, int *oldId){
-    boost::system::error_code error;
-    char data[10000];
-    socket->read_some(boost::asio::buffer(data), error);
-    cout << data << endl;
-    char *coords[2];
-    coords[0] = strtok(data,":");
-    coords[1] = strtok(NULL,":");
-    *newId = atoi(coords[0]);
-    *oldId = atoi(coords[1]);
+    try{
+        boost::system::error_code error;
+        char data[10];
+        size_t len = socket->read_some(boost::asio::buffer(data), error);
+        data[len] = '\0';
+        char *coords[2];
+        coords[0] = strtok(data,":");
+        coords[1] = strtok(NULL,":");
+        *newId = atoi(coords[0]);
+        *oldId = atoi(coords[1]);
+    }
+    catch (exception &ex){
+        cout << ex.what() << endl;
+    }
 }
 
 void Communication::waitCommunication(tcp::socket **socket){

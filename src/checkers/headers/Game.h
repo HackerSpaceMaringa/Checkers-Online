@@ -38,6 +38,7 @@ class Game: public EventHandler{
         virtual void waitPlayer(){}
         virtual void communicationType(){}
         virtual void answerPlayer(){}
+        virtual bool isWaiting(int){ return false;}
 };
 
 #endif
