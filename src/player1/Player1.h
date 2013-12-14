@@ -6,7 +6,7 @@
 class Player1: public Game{
     public:
         void waitPlayer();
-        void communicationType();
+        void communicationType(char *address);
         void answerPlayer();
         bool isWaiting(int);
 };

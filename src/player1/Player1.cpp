@@ -5,8 +5,8 @@ void Player1::answerPlayer(){
         Communication::sendMessage(socket, newId, oldId);
 }
 
-void Player1::communicationType(){
-    Communication::initCommunication(&socket);
+void Player1::communicationType(char* address){
+    Communication::initCommunication(&socket, address);
 }
 
 void Player1::waitPlayer(){

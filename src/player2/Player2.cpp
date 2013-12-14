@@ -5,7 +5,7 @@ void Player2::answerPlayer(){
         Communication::sendMessage(socket, newId, oldId);
 }
 
-void Player2::communicationType(){
+void Player2::communicationType(char *address){
     Communication::waitCommunication(&socket);
 }
 

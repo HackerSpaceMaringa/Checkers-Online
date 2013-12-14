@@ -29,14 +29,14 @@ class Game: public EventHandler{
         bool initGame();
         bool startGame();
         void resetGame();
-        void executeGame();
+        void executeGame(char*);
         void endGame();
         void checkGameSituation();
         void quitGame();
         void keyPressedDown(SDLKey key);
         void mouseLeftPressedDown(int x, int y);
         virtual void waitPlayer(){}
-        virtual void communicationType(){}
+        virtual void communicationType(char*){}
         virtual void answerPlayer(){}
         virtual bool isWaiting(int){ return false;}
 };

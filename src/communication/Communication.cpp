@@ -1,10 +1,10 @@
 #include "Communication.h"
 
-void Communication::initCommunication(tcp::socket **socket){
+void Communication::initCommunication(tcp::socket **socket, char *address){
     boost::asio::io_service io_service;
     (*socket) = new tcp::socket(io_service);
     tcp::resolver resolver(io_service);
-    boost::asio::connect(*(*socket), resolver.resolve({"127.0.0.1",
+    boost::asio::connect(*(*socket), resolver.resolve({address,
                 to_string(9000).c_str()}));
 }
 

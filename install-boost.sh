@@ -17,6 +17,7 @@ install(){
 	echo -e "\n\nInstalação concluída!"
 	cd ../
 	rm boost_1_54_0/ -r
+        sudo ldconfig
 }
 
 uninstall(){

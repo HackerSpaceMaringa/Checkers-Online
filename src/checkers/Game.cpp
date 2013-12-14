@@ -34,7 +34,7 @@ void Game::resetGame(){
     gameControl->fillBoard();
 }
 
-void Game::executeGame(){
+void Game::executeGame(char *address){
     if (!initGame())
         return;
 
@@ -43,7 +43,7 @@ void Game::executeGame(){
 
     SDL_Event event;
     
-    communicationType();
+    communicationType(address);
 
     while(!done){
         checkEvents(&event);

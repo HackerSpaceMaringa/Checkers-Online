@@ -1,7 +1,7 @@
 #include "Player1.h"
 
-int main(){
+int main(int argc, char *argv[]){
     Player1 checkers;
-    checkers.executeGame();
+    checkers.executeGame(argv[1]);
     return 0;
 }
