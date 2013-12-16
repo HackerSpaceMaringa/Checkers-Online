@@ -2,7 +2,6 @@
 
 int main(){
     Player2 checkers;
-    char *address = "none";
-    checkers.executeGame(address);
+    checkers.executeGame((char*)"none");
     return 0;
 }

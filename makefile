@@ -5,7 +5,7 @@ SRC_CHECKERS=$(wildcard ./src/checkers/*.cpp)
 OBJ_CHECKERS=$(SRC_CHECKERS:.cpp=.o)
 SRC_COMM=$(wildcard ./src/communication/*.cpp)
 OBJ_COMM=$(SRC_COMM:.cpp=.o)
-LINKER=-lSDL -lSDL_image -lSDL_ttf -lboost_system
+LINKER=-lSDL -lSDL_image -lSDL_ttf -lboost_system -lpthread
 STD=-std=c++11
 
 all: player1 player2
